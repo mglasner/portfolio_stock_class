@@ -42,8 +42,6 @@ class Portfolio(object):
             final_price = stock.Price(final_date)
             portfolio_initial_price += initial_price
             portfolio_final_price += final_price
-            print(stock.get_name(), initial_price)
-            print(stock.get_name(), final_price)
 
         profit = portfolio_final_price - portfolio_initial_price
         profit_rate = profit / portfolio_initial_price
@@ -53,6 +51,7 @@ class Portfolio(object):
         return profit, annualized_return
 
 
+# Run testing script
 if __name__ == "__main__":
     stock1 = Stock("stock1")
     stock2 = Stock("stock2")
